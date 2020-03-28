@@ -1,4 +1,4 @@
-baseURL = "https://blog.sancunguangyin.com/"
+baseURL = "isTianXin.github.io"
 languageCode = "zh-CN"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
 title = "三寸光阴 - 一寸光阴一寸金"
