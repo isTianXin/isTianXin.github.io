@@ -1,4 +1,4 @@
-baseURL = "https://blog.sancunguangyin.com/"
+baseURL = "https://isTianXin.github.io"
 publishDir = "docs"
 languageCode = "zh-CN"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
