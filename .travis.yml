@@ -1,4 +1,7 @@
 language: generic
+branches:
+    only:
+        blog
 deploy:
     provider: pages
     skip_cleanup: true
