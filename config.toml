@@ -74,3 +74,9 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     name = "About"
     url = "about/"
     weight = 20
+
+#使用内嵌HTML
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+		unsafe=true

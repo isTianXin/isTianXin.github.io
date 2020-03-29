@@ -52,7 +52,7 @@ GitHub Pages 现在已经不支持指定文件夹和修改分支了。有些教�
 
 2. 生成 [GitHub token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line), 并在 Travis CI 里选择 GitHub Pages项目(如 `isTianXin.github.io`), [添加环境变量](https://docs.travis-ci.com/user/environment-variables#defining-variables-in-repository-settings)`GITHUB_TOKEN`, 这个变量会在 `.travis.yml` 中使用，添加后的效果如图。
 
-   ![travis-enviroment-var](https://tva1.sinaimg.cn/large/00831rSTgy1gdavq3atmgj322u0k241l.jpg)
+   <a data-fancybox="gallery" href="https://tva1.sinaimg.cn/large/00831rSTgy1gdavq3atmgj322u0k241l.jpg"><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdavq3atmgj322u0k241l.jpg" alt="travis-env-var"></a>
 
 3. 在GitHub Pages 项目 blog 分支根目录下，编写并保存 `.travis.yml`,
 
@@ -110,7 +110,7 @@ GitHub Pages 现在已经不支持指定文件夹和修改分支了。有些教�
 
 打开 Travis CI, 找到对应的项目，当看到 passed, 就代表集成成功，打开博客网站去查看效果吧。
 
-![travis-job](https://tva1.sinaimg.cn/large/00831rSTgy1gdavp6w0hjj31yo0o6tdj.jpg)
+<a data-fancybox="gallery" href="https://tva1.sinaimg.cn/large/00831rSTgy1gdavp6w0hjj31yo0o6tdj.jpg"><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdavp6w0hjj31yo0o6tdj.jpg" alt="travis-job"></a>
 
 ## 工作流
 
