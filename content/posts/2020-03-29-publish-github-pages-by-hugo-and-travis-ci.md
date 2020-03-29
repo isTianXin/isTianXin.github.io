@@ -1,15 +1,13 @@
 ---
-title: "使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客 "
-date: 2020-03-29T14:02:54+08:00
-categories:
-    - hugo
-    - ci
-tags:
-    - hugo
-    - blog
-    - github pages
-    - travis ci
+title: "使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客"
+date: 2020-03-29T22:25:58+08:00
 draft: false
+toc: true
+tags: 
+  - hugo
+  - blog
+  - github pages
+  - travis ci
 ---
 
 将 Hugo 博客托管到 GitHub Pages 时，官方文档提供了[使用 master 分支 /docs 文件夹发布](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-docs-folder-on-master-branch)和[使用 gh-pages 分支发布](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch)两种方式。然而当设置 GitHub Pages 中的 source 选项时，你会发现:
@@ -72,9 +70,9 @@ GitHub Pages 现在已经不支持指定文件夹和修改分支了。有些教�
            branch: blog
        local_dir: public
    ```
-   
+
    该配置的作用是在 push 到 blog 分支后，会自动将 public 文件夹下的文件复制到 master 分支，从而实现自动发布。
-   
+
 4. 推送 blog 分支到 GitHub
 
    >  git push origin HEAD

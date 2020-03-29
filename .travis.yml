@@ -1,4 +1,18 @@
-language: generic
+language: go
+
+go:
+    - "1.13.1"
+
+branches:
+    only:
+        - blog
+
+install:
+    - sudo apt-get install hugo
+
+script:
+    - hugo
+
 deploy:
     provider: pages
     skip_cleanup: true
