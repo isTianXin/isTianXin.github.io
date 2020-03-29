@@ -14,6 +14,9 @@ install:
 script:
     - hugo
 
+after_script:
+    - cp CNAME LICENSE ./public
+
 deploy:
     provider: pages
     skip_cleanup: true
