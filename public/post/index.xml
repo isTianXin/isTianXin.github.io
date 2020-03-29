@@ -6,18 +6,18 @@
     <description>Recent content in Posts on 三寸光阴 - 一寸光阴一寸金</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 29 Mar 2020 13:44:42 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 14:02:54 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.sancunguangyin.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Init</title>
-      <link>https://blog.sancunguangyin.com/post/init/</link>
-      <pubDate>Sun, 29 Mar 2020 13:44:42 +0800</pubDate>
+      <title>使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客 </title>
+      <link>https://blog.sancunguangyin.com/post/2020-03-29-publish-github-pages-by-hugo-and-travis-ci/</link>
+      <pubDate>Sun, 29 Mar 2020 14:02:54 +0800</pubDate>
       
-      <guid>https://blog.sancunguangyin.com/post/init/</guid>
-      <description></description>
+      <guid>https://blog.sancunguangyin.com/post/2020-03-29-publish-github-pages-by-hugo-and-travis-ci/</guid>
+      <description>将 Hugo 博客托管到 GitHub Pages 时，官方文档提供了使用 master 分支 /docs 文件夹发布和使用 gh-pages 分支发布两种方式。然而当设置 GitHub Pages 中的 source 选项时，你会发现: User pages must be built from the master branch.</description>
     </item>
     
   </channel>

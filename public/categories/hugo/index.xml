@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>三寸光阴 - 一寸光阴一寸金</title>
-    <link>https://blog.sancunguangyin.com/</link>
-    <description>Recent content on 三寸光阴 - 一寸光阴一寸金</description>
+    <title>hugo on 三寸光阴 - 一寸光阴一寸金</title>
+    <link>https://blog.sancunguangyin.com/categories/hugo/</link>
+    <description>Recent content in hugo on 三寸光阴 - 一寸光阴一寸金</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 29 Mar 2020 14:02:54 +0800</lastBuildDate>
     
-	<atom:link href="https://blog.sancunguangyin.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.sancunguangyin.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

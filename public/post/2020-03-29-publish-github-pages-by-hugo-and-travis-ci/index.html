@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客  - 三寸光阴 - 一寸光阴一寸金</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="sancunguangyin" /><meta name="description" content="将 Hugo 博客托管到 GitHub Pages 时，官方文档提供了使用 master 分支 /docs 文件夹发布和使用 gh-pages 分支发布两种方式。然而当设置 GitHub Pages 中的 source 选项时，你会发现: User pages must be built from the master branch." /><meta name="keywords" content="sancunguangyin, blog, 三寸光阴" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.67.0 with theme even" />
+
+
+<link rel="canonical" href="https://blog.sancunguangyin.com/post/2020-03-29-publish-github-pages-by-hugo-and-travis-ci/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客 " />
+<meta property="og:description" content="将 Hugo 博客托管到 GitHub Pages 时，官方文档提供了使用 master 分支 /docs 文件夹发布和使用 gh-pages 分支发布两种方式。然而当设置 GitHub Pages 中的 source 选项时，你会发现: User pages must be built from the master branch." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.sancunguangyin.com/post/2020-03-29-publish-github-pages-by-hugo-and-travis-ci/" />
+<meta property="article:published_time" content="2020-03-29T14:02:54+08:00" />
+<meta property="article:modified_time" content="2020-03-29T14:02:54+08:00" />
+<meta itemprop="name" content="使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客 ">
+<meta itemprop="description" content="将 Hugo 博客托管到 GitHub Pages 时，官方文档提供了使用 master 分支 /docs 文件夹发布和使用 gh-pages 分支发布两种方式。然而当设置 GitHub Pages 中的 source 选项时，你会发现: User pages must be built from the master branch.">
+<meta itemprop="datePublished" content="2020-03-29T14:02:54&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-29T14:02:54&#43;08:00" />
+<meta itemprop="wordCount" content="737">
+
+
+
+<meta itemprop="keywords" content="hugo,blog,github pages,travis ci," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客 "/>
+<meta name="twitter:description" content="将 Hugo 博客托管到 GitHub Pages 时，官方文档提供了使用 master 分支 /docs 文件夹发布和使用 gh-pages 分支发布两种方式。然而当设置 GitHub Pages 中的 source 选项时，你会发现: User pages must be built from the master branch."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">三寸光阴</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">三寸光阴</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客 </h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-03-29 </span>
+        <div class="post-category">
+            <a href="/categories/hugo/"> hugo </a>
+            <a href="/categories/ci/"> ci </a>
+            </div>
+          <span class="more-meta"> 约 737 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#准备工作">准备工作</a>
+      <ul>
+        <li><a href="#hugo-本地建站">Hugo 本地建站</a></li>
+        <li><a href="#github-pages">GitHub Pages</a></li>
+      </ul>
+    </li>
+    <li><a href="#使用-travis-ci-持续集成">使用 Travis CI 持续集成</a>
+      <ul>
+        <li><a href="#创建-blog-分支">创建 blog 分支</a></li>
+        <li><a href="#配置-travis-ci">配置 Travis CI</a></li>
+        <li><a href="#测试效果">测试效果</a></li>
+      </ul>
+    </li>
+    <li><a href="#工作流">工作流</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>将 Hugo 博客托管到 GitHub Pages 时，官方文档提供了<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-docs-folder-on-master-branch">使用 master 分支 /docs 文件夹发布</a>和<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-of-project-pages-from-your-gh-pages-branch">使用 gh-pages 分支发布</a>两种方式。然而当设置 GitHub Pages 中的 source 选项时，你会发现:</p>
+<blockquote>
+<p>User pages must be built from the master branch.</p>
+</blockquote>
+<p>GitHub Pages 现在已经不支持指定文件夹和修改分支了。有些教程提供了<a href="%5Bhttps://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40%5D(https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40)">建立两个 repo</a>或者<a href="https://brent-li.github.io/post/build-personal-site-with-hugo/">只发布 public 文件夹</a>的方案，然而第一种管理太过繁琐，第二种有丢失本地文件的风险。因此这里我们使用 Travis CI，在同一个项目内维护两个分支，实现 push 之后博客的自动发布。</p>
+<h2 id="准备工作">准备工作</h2>
+<h3 id="hugo-本地建站">Hugo 本地建站</h3>
+<p>本文默认已经在本地搭建好了博客，并放在 blog  文件夹内。</p>
+<h3 id="github-pages">GitHub Pages</h3>
+<p>本文默认已经在 GitHub 建好了个人仓库。</p>
+<h2 id="使用-travis-ci-持续集成">使用 Travis CI 持续集成</h2>
+<h3 id="创建-blog-分支">创建 blog 分支</h3>
+<ol>
+<li>
+<p>进入 GitHub Pages 项目(如 <code>isTianxin.github.io</code>)，在根目录创建一个新的分支 blog</p>
+<blockquote>
+<p>git checkout &ndash;orphan blog</p>
+</blockquote>
+</li>
+<li>
+<p>删除该分支内的所有文件(如果 GitHub Pages 项目之前生成了 CNAME, LISENCE, README.md 等文件，这里需要保留)</p>
+<blockquote>
+<p>git rm rf .</p>
+</blockquote>
+</li>
+<li>
+<p>复制 Hugo 博客内的全部内容到当前文件夹下</p>
+</li>
+<li>
+<p>将之前保留的 CNAME 等文件复制到 public 文件夹(若没有该文件夹，使用 <code>hugo</code> 命令生成一个)</p>
+</li>
+<li>
+<p>提交分支</p>
+<blockquote>
+<p>git add .</p>
+<p>git commit -m &lsquo;init blog branch&rsquo;</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="配置-travis-ci">配置 Travis CI</h3>
+<ol>
+<li>
+<p>访问 <a href="https://travis-ci.org/">Travis CI</a>, 使用 GitHub 登陆并授权。</p>
+</li>
+<li>
+<p>生成 <a href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line">GitHub token</a>, 并在 Travis CI 里选择 GitHub Pages项目(如 <code>isTianXin.github.io</code>), <a href="https://docs.travis-ci.com/user/environment-variables#defining-variables-in-repository-settings">添加环境变量</a><code>GITHUB_TOKEN</code>, 这个变量会在 <code>.travis.yml</code> 中使用，添加后的效果如图。</p>
+<p><img src="/img/20200329/travis-enviroment-var.png" alt="travis-enviroment-var"></p>
+</li>
+<li>
+<p>在GitHub Pages 项目 blog 分支根目录下，编写并保存 <code>.travis.yml</code>,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">language</span><span class="p">:</span><span class="w"> </span>generic<span class="w">
+</span><span class="w"></span><span class="k">deploy</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">provider</span><span class="p">:</span><span class="w"> </span>pages<span class="w">
+</span><span class="w">    </span><span class="k">skip_cleanup</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="k">github_token</span><span class="p">:</span><span class="w"> </span>$GITHUB_TOKEN<span class="w">
+</span><span class="w">    </span><span class="k">keep_history</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="k">target_branch</span><span class="p">:</span><span class="w"> </span>master<span class="w">
+</span><span class="w">    </span><span class="k">on</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="k">branch</span><span class="p">:</span><span class="w"> </span>blog<span class="w">
+</span><span class="w">    </span><span class="k">local_dir</span><span class="p">:</span><span class="w"> </span>public<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>该配置的作用是在 push 到 blog 分支后，会自动将 public 文件夹下的文件复制到 master 分支，从而实现自动发布。</p>
+</li>
+<li>
+<p>推送 blog 分支到 GitHub</p>
+<blockquote>
+<p>git push origin HEAD</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="测试效果">测试效果</h3>
+<p>在 GitHub Pages 项目 blog 分支下创建一遍博文，并执行 <code>hugo</code> 命令生成静态内容到 public 文件夹，并将改动 push 到 GitHub，如:</p>
+<blockquote>
+<p>huho new post/test.md</p>
+<p>hugo</p>
+<p>git add .</p>
+<p>git commit -m &lsquo;添加测试博文&rsquo;</p>
+<p>git push origin blog</p>
+</blockquote>
+<p>打开 Travis CI, 找到对应的项目，当看到 passed, 就代表集成成功，打开你的博客网站去查看效果吧。</p>
+<p><img src="/img/20200329/travis-job.png" alt="travis-job"></p>
+<h2 id="工作流">工作流</h2>
+<p>添加 Travis CI 之后，只需要在写完博客并编译，将生成的所有文件推送到 blog 分支就可以了。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">sancunguangyin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-03-29
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" title="(CC BY 4.0)"><i class="fa fa-creative-commons"></i> 署名 4.0 国际</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hugo/">hugo</a>
+          <a href="/tags/blog/">blog</a>
+          <a href="/tags/github-pages/">github pages</a>
+          <a href="/tags/travis-ci/">travis ci</a>
+          </div>
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="me@sancunguangyin.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/isTianXin" class="iconfont icon-github" title="github"></a>
+  <a href="https://blog.sancunguangyin.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">sancunguangyin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

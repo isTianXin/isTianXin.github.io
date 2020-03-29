@@ -62,9 +62,6 @@ GitHub Pages 现在已经不支持指定文件夹和修改分支了。有些教�
 
    ```yaml
    language: generic
-   branches:
-       only:
-           blog
    deploy:
        provider: pages
        skip_cleanup: true
@@ -75,9 +72,9 @@ GitHub Pages 现在已经不支持指定文件夹和修改分支了。有些教�
            branch: blog
        local_dir: public
    ```
-
+   
    该配置的作用是在 push 到 blog 分支后，会自动将 public 文件夹下的文件复制到 master 分支，从而实现自动发布。
-
+   
 4. 推送 blog 分支到 GitHub
 
    >  git push origin HEAD
