@@ -33,5 +33,5 @@ tags:
 
 
 
-> 翻译自[Last Messages](https://www.reddit.com/r/shortscarystories/comments/euitmh/last_messages/)
+> 翻译自: [Last Messages](https://www.reddit.com/r/shortscarystories/comments/euitmh/last_messages/)
 
