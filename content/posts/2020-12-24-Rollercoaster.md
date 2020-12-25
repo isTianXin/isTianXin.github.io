@@ -33,4 +33,4 @@ tags:
 
 ------
 
-> 翻译自：[Rollercoaster](
+> 翻译自：[Rollercoaster](https://www.reddit.com/r/shortscarystories/comments/guodn3/rollercoaster/)

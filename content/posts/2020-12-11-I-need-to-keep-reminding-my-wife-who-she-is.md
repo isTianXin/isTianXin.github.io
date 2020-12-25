@@ -59,4 +59,4 @@ tags:
 
 ------
 
-> 翻译自: [I need to keep reminding my wife who she is.](
+> 翻译自: [I need to keep reminding my wife who she is.](https://www.reddit.com/r/shortscarystories/comments/k5kkgu/i_need_to_keep_reminding_my_wife_who_she_is/)
