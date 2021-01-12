@@ -1,3 +1,4 @@
+baseurl = "/"
 languageCode = "zh-cn"
 defaultContentLanguage = "en"
 title = "三寸光阴"
@@ -22,8 +23,6 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 [taxonomies]
   tag = "tags"
   # Categories are disabled by default.
-
-
 
 [params]
 
@@ -83,11 +82,11 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "archive"
-        name = "Archive"
+        name = "归档"
         url = "/archive"
         weight = 10
       [[languages.en.menu.main]]
         identifier = "about"
-        name = "About"
+        name = "关于"
         url = "/about"
         weight = 20
