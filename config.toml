@@ -3,7 +3,7 @@ languageCode = "zh-cn"
 defaultContentLanguage = "en"
 title = "三寸光阴"
 theme = "hello-friend"
-paginate = 5
+paginate = 7
 
 # enableGitInfo = true
 pygmentsCodefences  = true
