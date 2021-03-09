@@ -149,6 +149,6 @@ tags:
 
 “我知道了，比尔。”
 
-
+------
 
 > 翻译自: [Confession](https://www.reddit.com/r/shortscarystories/comments/ejp6vs/confession/)
