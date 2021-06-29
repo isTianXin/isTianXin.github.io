@@ -30,9 +30,10 @@ jobs:
           hugo-version: '0.68.3'
         
       - name: Build
-        run: |
-          hugo --minify
-          cp CNAME LICENSE ./public
+        run: hugo --minify
+      
+      - name: Copy Files
+        run: cp CNAME LICENSE ./public
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
