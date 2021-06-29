@@ -6,12 +6,13 @@
       {{ partial "logo.html" . }}
       <div class="copyright">
         <span
-          >© {{ now.Year }} Powered by
-          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
+          >© {{ now.Year }}
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">备案号：鲁ICP备2021021411号-1</a></span
         >
         <span
-          >Theme created by
-          <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span
+          >
+          <img src="{{ "img/20210630/beian.png" | absURL }}" style="float:left;padding-right: 4px;"/>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=37011602000031" target="_blank" rel="noopener">鲁公网安备37011602000031号</a></span
         >
       </div>
     {{ end }}
