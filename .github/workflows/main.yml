@@ -41,7 +41,7 @@ jobs:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
           GITHUB_REPO: github.com/isTianXin/isTianXin.github.io.git
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-          TARGET_BRANCH: deploy
+          TARGET_BRANCH: master
         run: |
           cd public
           git config --global user.name $USER_NAME
