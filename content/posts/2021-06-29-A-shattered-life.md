@@ -209,3 +209,4 @@ Mar 的微笑是最重要的。雪花从身后的窗户落下，她在温暖的�
 
 > 翻译自：[A Shattered Life](https://www.reddit.com/r/nosleep/comments/7txais/a_shattered_life/)
 
+
