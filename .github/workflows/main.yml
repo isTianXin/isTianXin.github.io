@@ -27,24 +27,39 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.68.3'
+          hugo-version: '0.83.1'
         
+      - name: Clean up
+        run: |
+          if [ -d "public" ]; then
+            rm -rf public
+          fi
+          
+      - name: Setup Branch
+        id: vars
+        run: |
+          echo "::set-output name=commit_msg::$(git log -1 --pretty=%B)"
+          git worktree add public master
+
       - name: Build
         run: hugo --minify
       
       - name: Copy Files
         run: cp CNAME LICENSE ./public
-          
-      - name: Deploy
+      
+      - name: Commit
         env:
           USER_NAME: Github Actions
-          USER_EMAIL: ${{ secrets.USER_EMAIL }}
-          GITHUB_REPO: github.com/isTianXin/isTianXin.github.io.git
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-          TARGET_BRANCH: master
+          USER_EMAIL: actions@users.noreply.github.com
         run: |
           cd public
-          git config --global user.name $USER_NAME
-          git config --global user.email $USER_EMAIL
-          git init && git add . && git commit -m 'Auto Build By Github Actions'
-          git push --force --quiet "https://$GITHUB_TOKEN@$GITHUB_REPO" master:$TARGET_BRANCH
+          git config user.name $USER_NAME
+          git config user.email $USER_EMAIL
+          if [ "`git status -s`" ]
+          then
+            git add --all
+            git commit -am "deployed: ${{ steps.vars.outputs.commit_msg }}"
+          fi
+          
+      - name: Deploy
+        run: git push --all
