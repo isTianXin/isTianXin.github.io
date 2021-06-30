@@ -5,7 +5,7 @@ name: Deploy GitHub Pages
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push or pull request events but only for the blog branch
   push:
     branches: 
       - blog
@@ -24,30 +24,36 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
-          
+      
+      # Install Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.83.1'
-        
+      
+      # Remove public folder if exists
       - name: Clean up
         run: |
           if [ -d "public" ]; then
             rm -rf public
           fi
-          
+      
+      # Get commit message and link public folder to master branch
       - name: Setup Branch
         id: vars
         run: |
           echo "::set-output name=commit_msg::$(git log -1 --pretty=%B)"
           git worktree add public master
 
+      # Build by Hugo
       - name: Build
         run: hugo --minify
       
+      # Copy additional files to public folder
       - name: Copy Files
         run: cp CNAME LICENSE ./public
       
+      # Git commit 
       - name: Commit
         env:
           USER_NAME: Github Actions
@@ -59,8 +65,9 @@ jobs:
           if [ "`git status -s`" ]
           then
             git add --all
-            git commit -am "deployed: ${{ steps.vars.outputs.commit_msg }}"
+            git commit -am "Auto Deployed: ${{ steps.vars.outputs.commit_msg }}"
           fi
-          
+      
+      # Git push    
       - name: Deploy
         run: git push --all
