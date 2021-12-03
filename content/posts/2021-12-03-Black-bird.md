@@ -26,9 +26,11 @@ tags:
 "你画的东西叫做森林，"那天下午来拜访我的一位警官说，"现在需要你告诉我们那是哪里。"
 
 [5](https://www.reddit.com/r/TwoSentenceHorror/comments/jsuw1d/when_the_old_gypsy_woman_told_me_that_i_would_die/). When the old gypsy woman told me that I would die “at the stroke of midnight” I was skeptical but decided to stay up anyway.
+
 那个吉普赛老妇人告诉我会"在午夜钟声敲响时"死去，我很怀疑，但还是决定熬夜。
 
 As left side of my body went completely numb, I realized that English was probably not her first language...
+
 当我的左侧身体完全麻木时，我意识到英语可能不是她的母语......
 
 > 译者注：
