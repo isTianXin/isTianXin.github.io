@@ -21,7 +21,7 @@ tags:
 
 只是一个**强烈**的建议。
 
-[4](https://www.reddit.com/r/TwoSentenceHorror/comments/yg1af9/after_the_christian_rapture_happened_to_everyones/). 基督徒被提[^1]事件发生后，那些留下的人（以及之后出生的人）额头上都有一个奇怪的、无法消除的标记。
+[4](https://www.reddit.com/r/TwoSentenceHorror/comments/yg1af9/after_the_christian_rapture_happened_to_everyones/). 基督徒被提[^1] 事件发生后，那些留下的人（以及之后出生的人）额头上都有一个奇怪的、无法消除的标记。
 
 翻译花了几十年时间，结果令人毛骨悚然：“不采收，不宜食用”。
 
@@ -51,4 +51,4 @@ tags:
 
 祈祷让你更容易被发现。
 
-[^1]：[被提](https://zh.wikipedia.org/zh-cn/%E8%A2%AB%E6%8F%90)（英语：Rapture），是基督教末世论中的一种概念，认为当耶稣再临之前（或同时），已死的人将会被复活高升，活着的人也将会一起被送到天上的至圣所与基督相会，并且身体将升华为不朽的身体。
+[^1]: [被提](https://zh.wikipedia.org/zh-cn/%E8%A2%AB%E6%8F%90)（英语：Rapture），是基督教末世论中的一种概念，认为当耶稣再临之前（或同时），已死的人将会被复活高升，活着的人也将会一起被送到天上的至圣所与基督相会，并且身体将升华为不朽的身体。
