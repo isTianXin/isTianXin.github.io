@@ -13,7 +13,7 @@ tags:
 
 事实证明，星星差不多是同一回事。
 
-[2](https://www.reddit.com/r/TwoSentenceHorror/comments/y9wfa9/she_awoke_feeling_too_warm_wet_and_itchy_so_she/). 她醒来时感觉浑身湿热、瘙痒难耐，于是使劲晃了晃身体把身体变干，并甩掉了大部分跳蚤。
+[2](https://www.reddit.com/r/TwoSentenceHorror/comments/y9wfa9/she_awoke_feeling_too_warm_wet_and_itchy_so_she/). 她醒来时感觉浑身湿热、瘙痒难耐，于是使劲晃了晃把身体变干，并甩掉了大部分跳蚤。
 
 地球再次陷入了沉睡。
 
