@@ -1,5 +1,5 @@
 ---
-title: "TwoSentenceHorror 合集：[SHOCK OF THE QUEEN](https://baike.baidu.com/item/%E6%AD%BB%E7%A5%9E%E5%8D%B7%E9%A6%96%E8%AF%AD/2899873#42)"
+title: "TwoSentenceHorror 合集：SHOCK OF THE QUEEN"
 date: 2022-12-10T00:14:24+08:00
 draft: false
 toc: false
@@ -15,7 +15,7 @@ tags:
 
 [2](https://www.reddit.com/r/TwoSentenceHorror/comments/vj15pw/i_swallow_the_pills_down_the_bottle_of_vodka_and/). 我吞掉药片，喝完整瓶伏特加，躺下等待人生终局。
 
-最终我看到一道明亮的白光，但开始走向它时，一个声音说道：“囚犯7000043，请不要提前退出模拟。”
+最终我看到一道明亮的白光，但开始走向它时，一个声音说道：“囚犯 7000043，请不要提前退出模拟。”
 
 [3](https://www.reddit.com/r/TwoSentenceHorror/comments/vdjbmb/seedless_watermelon_my_ass_i_thought_as_i_spit_a/). "无籽西瓜，妈的"，我一边想一边把一个特别大的西瓜籽吐到盘子里。
 
@@ -25,7 +25,7 @@ tags:
 
 我一直都是左撇子么？
 
-[5](https://www.reddit.com/r/TwoSentenceHorror/comments/l2btkt/as_i_watch_her_roll_peacefully_over_in_her_sleep/). 我看着她在睡梦中翻了个身，微笑着想我是有多幸运能够知道真爱是什么感觉。
+[5](https://www.reddit.com/r/TwoSentenceHorror/comments/l2btkt/as_i_watch_her_roll_peacefully_over_in_her_sleep/). 我看着她在睡梦中翻了个身，微笑着想我是有多幸运才能够知道真爱是什么感觉。
 
 其他人可能觉得只是一时疏忽，但我知道她是为了我才在百叶窗上留条缝的。
 
