@@ -1,7 +1,7 @@
 ---
 title: "使用 Travis CI 持续集成托管在 GitHub Pages 的 Hugo 博客"
 date: 2020-03-29T22:25:58+08:00
-draft: false
+draft: true
 toc: true
 tags: 
   - hugo
