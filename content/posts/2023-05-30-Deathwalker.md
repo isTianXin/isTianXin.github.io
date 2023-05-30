@@ -9,21 +9,21 @@ tags:
   - two sentence horror
 ---
 
-[1](https://www.reddit.com/r/TwoSentenceHorror/comments/12c5tl2/i_was_relieved_when_i_realized_the_only_damage_to/). 发现时间机器不过是电线出了点问题，我长舒了口气。
+[1](https://www.reddit.com/r/TwoSentenceHorror/comments/13ckhcr/5_years_ago_today_we_arrived_and_offered_humanity/). 5 年前的今天，我们来到这里，为人类提供了长生不老药，每一剂都需要一个健康的人类儿童大脑。
+
+我们实际上并不需要大脑，但看着人类为追求永生而不惜一切代价的确是件有意思的事情。
+
+[2](https://www.reddit.com/r/TwoSentenceHorror/comments/12c5tl2/i_was_relieved_when_i_realized_the_only_damage_to/). 发现时间机器不过是电线出了点问题，我长舒了口气。
 
 现在只需要找古苏美尔人买点优质的铜就可以了。[^1]
 
-[2](https://www.reddit.com/r/TwoSentenceHorror/comments/davq69/after_her_best_friend_julia_committed_suicide_my/). 在最好的朋友 Julia 自杀后，女儿 Sara 以她的名义创办了一家慈善机构，用以打击网络霸凌。
+[3](https://www.reddit.com/r/TwoSentenceHorror/comments/davq69/after_her_best_friend_julia_committed_suicide_my/). 在最好的朋友 Julia 自杀后，女儿 Sara 以她的名义创办了一家慈善机构，用以打击网络霸凌。
 
 虽然花了很多功夫才把 Julia 推到死亡边缘，但丈夫和我都非常高兴，Sara 又有了可以写入大学申请的活动。
 
-[3](https://www.reddit.com/r/TwoSentenceHorror/comments/139mcdt/when_henrietta_lacks_died_in_1951_from_her_cancer/). 当 Henrietta Lacks[^2] 于 1951 年死于癌症时，她认为自己的痛苦终于结束了。
+[4](https://www.reddit.com/r/TwoSentenceHorror/comments/139mcdt/when_henrietta_lacks_died_in_1951_from_her_cancer/). 当 Henrietta Lacks[^2] 于 1951 年死于癌症时，她认为自己的痛苦终于结束了。
 
 直到 3051 年，科学家才发现，只有细胞全部死亡后，人的灵魂才会安息。
-
-[4](https://www.reddit.com/r/TwoSentenceHorror/comments/13ckhcr/5_years_ago_today_we_arrived_and_offered_humanity/). 5 年前的今天，我们来到这里，为人类提供了长生不老药，每一剂都需要一个健康的人类儿童大脑。
-
-我们实际上并不需要大脑，但看着人类为追求永生而不惜一切代价的确是件有意思的事情。
 
 [5](https://www.reddit.com/r/TwoSentenceHorror/comments/134ke6f/how_did_you_die_i_said_to_my_dead_friend_on_the/). “你是怎么死的？”我在通灵板上问死去的朋友。
 
